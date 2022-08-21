@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/Banpick1.css">
+    <link rel="stylesheet" href="code.html">
+</head>
+<body>
+    <div class="container">
+        <!--<div class="logo">
+                         <img src="tainguyen/1.png" width="100%">
+                       </div>-->
+        <div class="baohieu"><img src="tainguyen/Trong.png" id="baohieu" width="100%"></div>
+        <div class="search-box">
+            <div class="icon-search">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <input type="text" placeholder="Search Hero" onkeyup="searchfunc()" id="searchValue">
+        </div>
+        <ul class="ul" id="searchView">
+
+        </ul>
+        <div class="hero">
+            <div class="hero-box" data-name="Trong">
+                <img src="tainguyen/Trong.png" onclick="zoomout(this)">
+                <span>Nen trong</span>
+            </div>
+            <div class="hero-box" data-name="Top">
+                <img src="tainguyen/Top.png" onclick="zoomout(this)">
+                <span>Top</span>
+            </div>
+            <div class="hero-box" data-name="Jung">
+                <img src="tainguyen/jung.png" onclick="zoomout(this)">
+                <span>Jung</span>
+            </div>
+            <div class="hero-box" data-name="Mid">
+                <img src="tainguyen/mid.png" onclick="zoomout(this)">
+                <span>Mid</span>
+            </div>
+            <div class="hero-box" data-name="Ad">
+                <img src="tainguyen/ad.png" onclick="zoomout(this)">
+                <span>Ad</span>
+            </div>
+            <div class="hero-box" data-name="Sp">
+                <img src="tainguyen/sp.png" onclick="zoomout(this)">
+                <span>Sp</span>
+            </div>
+            <div class="hero-box" data-name="Yan">
+                <img src="tainguyen/Yan.png" onclick="zoomout(this)">
+                <span>Yan</span>
+            </div>
+            <div class="hero-box" data-name="Iggy">
+                <img src="tainguyen/IGGY.png" onclick="zoomout(this)">
+                <span>Iggy</span>
+            </div>
+            <div class="hero-box" data-name="Zata">
+                <img src="tainguyen/Zata.png" onclick="zoomout(this)">
+                <span>Zata</span>
+            </div>
+            <div class="hero-box" data-name="Zip">
+                <img src="tainguyen/Zip.png" onclick="zoomout(this)">
+                <span>Zip</span>
+            </div>
+            <div class="hero-box" data-name="Ata">
+                <img src="tainguyen/Ata.png" onclick="zoomout(this)">
+                <span>Ata</span>
+            </div>
+            <div class="hero-box" data-name="Zuka">
+                <img src="tainguyen/Zuka.png" onclick="zoomout(this)">
+                <span>Zuka</span>
+            </div>
+            <div class="hero-box" data-name="Valhein">
+                <img src="tainguyen/Valhein.png" onclick="zoomout(this)">
+                <span>Valhein</span>
+            </div>
+            <div class="hero-box" data-name="Cresht">
+                <img src="tainguyen/Cresht.png" onclick="zoomout(this)">
+                <span>Cresht</span>
+            </div>
+            <div class="hero-box" data-name="Moren">
+                <img src="tainguyen/Moren.png" onclick="zoomout(this)">
+                <span>Moren</span>
+            </div>
+            <div class="hero-box" data-name="Yena">
+                <img src="tainguyen/Yena.png" onclick="zoomout(this)">
+                <span>Yena</span>
+            </div>
+            <div class="hero-box" data-name="Aleister">
+                <img src="tainguyen/Aleister.png" onclick="zoomout(this)">
+                <span>Aleister</span>
+            </div>
+            <div class="hero-box" data-name="Thane">
+                <img src="tainguyen/Thane.png" onclick="zoomout(this)">
+                <span>Thane</span>
+            </div>
+            <div class="hero-box" data-name="Jinna">
+                <img src="tainguyen/Jinna.png" onclick="zoomout(this)">
+                <span>Jinna</span>
+            </div>
+            <div class="hero-box" data-name="TeeMee">
+                <img src="tainguyen/TeeMee.png" onclick="zoomout(this)">
+                <span>TeeMee</span>
+            </div>
+            <div class="hero-box" data-name="Enzo">
+                <img src="tainguyen/Enzo.png" onclick="zoomout(this)">
+                <span>Enzo</span>
+            </div>
+            <div class="hero-box" data-name="Fennik">
+                <img src="tainguyen/Fennik.png" onclick="zoomout(this)">
+                <span>Fennik</span>
+            </div>
+            <div class="hero-box" data-name="Veera">
+                <img src="tainguyen/Veera.png" onclick="zoomout(this)">
+                <span>Veera</span>
+            </div>
+            <div class="hero-box" data-name="Lindis">
+                <img src="tainguyen/Lindis.png" onclick="zoomout(this)">
+                <span>Lindis</span>
+            </div>
+            <div class="hero-box" data-name="Lumburr">
+                <img src="tainguyen/Lumburr.png" onclick="zoomout(this)">
+                <span>Lumburr</span>
+            </div>
+            <div class="hero-box" data-name="Lữ Bố">
+                <img src="tainguyen/Lữ Bố.png" onclick="zoomout(this)">
+                <span>Lữ Bố</span>
+            </div>
+            <div class="hero-box" data-name="Maloch">
+                <img src="tainguyen/Maloch.png" onclick="zoomout(this)">
+                <span>Maloch</span>
+            </div>
+            <div class="hero-box" data-name="Omen">
+                <img src="tainguyen/Omen.png" onclick="zoomout(this)">
+                <span>Omen</span>
+            </div>
+            <div class="hero-box" data-name="Qi">
+                <img src="tainguyen/Qi.png" onclick="zoomout(this)">
+                <span>Qi</span>
+            </div>
+            <div class="hero-box" data-name="Natalya">
+                <img src="tainguyen/Natalya.png" onclick="zoomout(this)">
+                <span>Natalya</span>
+            </div>
+            <div class="hero-box" data-name="Mina">
+                <img src="tainguyen/Mina.png" onclick="zoomout(this)">
+                <span>Mina</span>
+            </div>
+            <div class="hero-box" data-name="Ngộ Không">
+                <img src="tainguyen/Ngộ Không.png" onclick="zoomout(this)">
+                <span>Ngộ Không</span>
+            </div>
+            <div class="hero-box" data-name="Tulen">
+                <img src="tainguyen/Tulen.png" onclick="zoomout(this)">
+                <span>Tulen</span>
+            </div>
+            <div class="hero-box" data-name="Celica">
+                <img src="tainguyen/Celica.png" onclick="zoomout(this)">
+                <span>Celica</span>
+            </div>
+            <div class="hero-box" data-name="Superman">
+                <img src="tainguyen/Superman.png" onclick="zoomout(this)">
+                <span>Superman</span>
+            </div>
+            <div class="hero-box" data-name="Krixi">
+                <img src="tainguyen/Krixi.png" onclick="zoomout(this)">
+                <span>Krixi</span>
+            </div>
+            <div class="hero-box" data-name="Kriknak">
+                <img src="tainguyen/Kriknak.png" onclick="zoomout(this)">
+                <span>Kriknak</span>
+            </div>
+            <div class="hero-box" data-name="Liliana">
+                <img src="tainguyen/Liliana.png" onclick="zoomout(this)">
+                <span>Liliana</span>
+            </div>
+            <div class="hero-box" data-name="Volkath">
+                <img src="tainguyen/Volkath.png" onclick="zoomout(this)">
+                <span>Volkath</span>
+            </div>
+            <div class="hero-box" data-name="Wonder Woman">
+                <img src="tainguyen/Wonder Woman.png" onclick="zoomout(this)">
+                <span>Wonder Woman</span>
+            </div>
+            <div class="hero-box" data-name="Mganga">
+                <img src="tainguyen/Mganga.png" onclick="zoomout(this)">
+                <span>Mganga</span>
+            </div>
+            <div class="hero-box" data-name="Arthur">
+                <img src="tainguyen/Arthur.png" onclick="zoomout(this)">
+                <span>Arthur</span>
+            </div>
+            <div class="hero-box" data-name="Max">
+                <img src="tainguyen/Max.png" onclick="zoomout(this)">
+                <span>Max</span>
+            </div>
+            <div class="hero-box" data-name="Krizzix">
+                <img src="tainguyen/Krizzix.png" onclick="zoomout(this)">
+                <span>Krizzix</span>
+            </div>
+            <div class="hero-box" data-name="Xeniel">
+                <img src="tainguyen/Xeniel.png" onclick="zoomout(this)">
+                <span>Xeniel</span>
+            </div>
+            <div class="hero-box" data-name="Triệu Vân">
+                <img src="tainguyen/Triệu Vân.png" onclick="zoomout(this)">
+                <span>Triệu Vân</span>
+            </div>
+            <div class="hero-box" data-name="Slimz">
+                <img src="tainguyen/Slimz.png" onclick="zoomout(this)">
+                <span>Slimz</span>
+            </div>
+            <div class="hero-box" data-name="The Flash">
+                <img src="tainguyen/The Flash.png" onclick="zoomout(this)">
+                <span>The Flash</span>
+            </div>
+            <div class="hero-box" data-name="Elandorr">
+                <img src="tainguyen/Elandorr.png" onclick="zoomout(this)">
+                <span>Elandorr</span>
+            </div>
+            <div class="hero-box" data-name="KilGroth">
+                <img src="tainguyen/KilGroth.png" onclick="zoomout(this)">
+                <span>KilGroth</span>
+            </div>
+            <div class="hero-box" data-name="Omega">
+                <img src="tainguyen/Omega.png" onclick="zoomout(this)">
+                <span>Omega</span>
+            </div>
+            <div class="hero-box" data-name="Ilumia">
+                <img src="tainguyen/Ilumia.png" onclick="zoomout(this)">
+                <span>Ilumia</span>
+            </div>
+            <div class="hero-box" data-name="Wisp">
+                <img src="tainguyen/Wisp.png" onclick="zoomout(this)">
+                <span>Wisp</span>
+            </div>
+            <div class="hero-box" data-name="Ishar">
+                <img src="tainguyen/Ishar.png" onclick="zoomout(this)">
+                <span>Ishar</span>
+            </div>
+            <div class="hero-box" data-name="Darcy">
+                <img src="tainguyen/Darcy.png" onclick="zoomout(this)">
+                <span>Darcy</span>
+            </div>
+            <div class="hero-box" data-name="Kahlii">
+                <img src="tainguyen/Kahlii.png" onclick="zoomout(this)">
+                <span>Kahlii</span>
+            </div>
+            <div class="hero-box" data-name="Preyta">
+                <img src="tainguyen/Preyta.png" onclick="zoomout(this)">
+                <span>Preyta</span>
+            </div>
+            <div class="hero-box" data-name="Arum">
+                <img src="tainguyen/Arum.png" onclick="zoomout(this)">
+                <span>Arum</span>
+            </div>
+            <div class="hero-box" data-name="Dirak">
+                <img src="tainguyen/Dirak.png" onclick="zoomout(this)">
+                <span>Dirak</span>
+            </div>
+            <div class="hero-box" data-name="Hayate">
+                <img src="tainguyen/Hayate.png" onclick="zoomout(this)">
+                <span>Hayate</span>
+            </div>
+            <div class="hero-box" data-name="Zephys">
+                <img src="tainguyen/Zephys.png" onclick="zoomout(this)">
+                <span>Zephys</span>
+            </div>
+            <div class="hero-box" data-name="Rouie">
+                <img src="tainguyen/Rouie.png" onclick="zoomout(this)">
+                <span>Rouie</span>
+            </div>
+            <div class="hero-box" data-name="Skud">
+                <img src="tainguyen/Skud.png" onclick="zoomout(this)">
+                <span>Skud</span>
+            </div>
+            <div class="hero-box" data-name="Rourke">
+                <img src="tainguyen/Rourke.png" onclick="zoomout(this)">
+                <span>Rourke</span>
+            </div>
+            <div class="hero-box" data-name="Keera">
+                <img src="tainguyen/Keera.png" onclick="zoomout(this)">
+                <span>Keera</span>
+            </div>
+            <div class="hero-box" data-name="Capheny">
+                <img src="tainguyen/Capheny.png" onclick="zoomout(this)">
+                <span>Capheny</span>
+            </div>
+            <div class="hero-box" data-name="Skud">
+                <img src="tainguyen/Skud.png" onclick="zoomout(this)">
+                <span>Skud</span>
+            </div>
+            <div class="hero-box" data-name="Điêu Thuyền">
+                <img src="tainguyen/Điêu Thuyền.png" onclick="zoomout(this)">
+                <span>Điêu Thuyền</span>
+            </div>
+            <div class="hero-box" data-name="Raz">
+                <img src="tainguyen/Raz.png" onclick="zoomout(this)">
+                <span>Raz</span>
+            </div>
+            <div class="hero-box" data-name="Marja">
+                <img src="tainguyen/Marja.png" onclick="zoomout(this)">
+                <span>Marja</span>
+            </div>
+            <div class="hero-box" data-name="Errol">
+                <img src="tainguyen/Errol.png" onclick="zoomout(this)">
+                <span>Errol</span>
+            </div>
+            <div class="hero-box" data-name="Roxie">
+                <img src="tainguyen/Roxie.png" onclick="zoomout(this)">
+                <span>Roxie</span>
+            </div>
+            <div class="hero-box" data-name="Chaugnar">
+                <img src="tainguyen/Chaugnar.png" onclick="zoomout(this)">
+                <span>Chaugnar</span>
+            </div>
+            <div class="hero-box" data-name="Paine">
+                <img src="tainguyen/Paine.png" onclick="zoomout(this)">
+                <span>Paine</span>
+            </div>
+            <div class="hero-box" data-name="Lauriel">
+                <img src="tainguyen/Lauriel.png" onclick="zoomout(this)">
+                <span>Lauriel</span>
+            </div>
+            <div class="hero-box" data-name="Tachi">
+                <img src="tainguyen/Tachi.png" onclick="zoomout(this)">
+                <span>Tachi</span>
+            </div>
+            <div class="hero-box" data-name="Violet">
+                <img src="tainguyen/Violet.png" onclick="zoomout(this)">
+                <span>Violet</span>
+            </div>
+            <div class="hero-box" data-name="Batman">
+                <img src="tainguyen/Batman.png" onclick="zoomout(this)">
+                <span>Batman</span>
+            </div>
+            <div class="hero-box" data-name="Baldum">
+                <img src="tainguyen/Baldum.png" onclick="zoomout(this)">
+                <span>Baldum</span>
+            </div>
+            <div class="hero-box" data-name="Laville">
+                <img src="tainguyen/Laville.png" onclick="zoomout(this)">
+                <span>Laville</span>
+            </div>
+            <div class="hero-box" data-name="Aya">
+                <img src="tainguyen/Aya.png" onclick="zoomout(this)">
+                <span>Aya</span>
+            </div>
+            <div class="hero-box" data-name="Butterfly">
+                <img src="tainguyen/Butterfly.png" onclick="zoomout(this)">
+                <span>Butterfly</span>
+            </div>
+            <div class="hero-box" data-name="Airi">
+                <img src="tainguyen/Airi.png" onclick="zoomout(this)">
+                <span>Airi</span>
+            </div>
+            <div class="hero-box" data-name="Annette">
+                <img src="tainguyen/Annette.png" onclick="zoomout(this)">
+                <span>Annette</span>
+            </div>
+            <div class="hero-box" data-name="Ormarr">
+                <img src="tainguyen/Ormarr.png" onclick="zoomout(this)">
+                <span>Ormarr</span>
+            </div>
+            <div class="hero-box" data-name="Amily">
+                <img src="tainguyen/Amily.png" onclick="zoomout(this)">
+                <span>Amily</span>
+            </div>
+            <div class="hero-box" data-name="AzzenKa">
+                <img src="tainguyen/AzzenKa.png" onclick="zoomout(this)">
+                <span>AzzenKa</span>
+            </div>
+            <div class="hero-box" data-name="Ignis">
+                <img src="tainguyen/Ignis.png" onclick="zoomout(this)">
+                <span>Ignis</span>
+            </div>
+            <div class="hero-box" data-name="Y’bneth">
+                <img src="tainguyen/Y’bneth.png" onclick="zoomout(this)">
+                <span>Y’bneth</span>
+            </div>
+            <div class="hero-box" data-name="Allain">
+                <img src="tainguyen/Allain.png" onclick="zoomout(this)">
+                <span>Allain</span>
+            </div>
+            <div class="hero-box" data-name="Alice">
+                <img src="tainguyen/Alice.png" onclick="zoomout(this)">
+                <span>Alice</span>
+            </div>
+            <div class="hero-box" data-name="Murad">
+                <img src="tainguyen/Murad.png" onclick="zoomout(this)">
+                <span>Murad</span>
+            </div>
+            <div class="hero-box" data-name="Elsu">
+                <img src="tainguyen/Elsu.png" onclick="zoomout(this)">
+                <span>Elsu</span>
+            </div>
+            <div class="hero-box" data-name="Thorne">
+                <img src="tainguyen/Thorne.png" onclick="zoomout(this)">
+                <span>Thorne</span>
+            </div>
+            <div class="hero-box" data-name="Gildur">
+                <img src="tainguyen/Gildur.png" onclick="zoomout(this)">
+                <span>Gildur</span>
+            </div>
+            <div class="hero-box" data-name="Zill">
+                <img src="tainguyen/Zill.png" onclick="zoomout(this)">
+                <span>Zill</span>
+            </div>
+            <div class="hero-box" data-name="Richter">
+                <img src="tainguyen/Richter.png" onclick="zoomout(this)">
+                <span>Richter</span>
+            </div>
+            <div class="hero-box" data-name="Sinestrea">
+                <img src="tainguyen/Sinestrea.png" onclick="zoomout(this)">
+                <span>Sinestrea</span>
+            </div>
+            <div class="hero-box" data-name="Yorn">
+                <img src="tainguyen/Yorn.png" onclick="zoomout(this)">
+                <span>Yorn</span>
+            </div>
+            <div class="hero-box" data-name="Arduin">
+                <img src="tainguyen/Arduin.png" onclick="zoomout(this)">
+                <span>Arduin</span>
+            </div>
+            <div class="hero-box" data-name="Wiro">
+                <img src="tainguyen/Wiro.png" onclick="zoomout(this)">
+                <span>Wiro</span>
+            </div>
+            <div class="hero-box" data-name="Dextra">
+                <img src="tainguyen/Dextra.png" onclick="zoomout(this)">
+                <span>Dextra</span>
+            </div>
+            <div class="hero-box" data-name="Toro">
+                <img src="tainguyen/Toro.png" onclick="zoomout(this)">
+                <span>Toro</span>
+            </div>
+            <div class="hero-box" data-name="Joker">
+                <img src="tainguyen/Joker.png" onclick="zoomout(this)">
+                <span>Joker</span>
+            </div>
+            <div class="hero-box" data-name="Quillen">
+                <img src="tainguyen/Quillen.png" onclick="zoomout(this)">
+                <span>Quillen</span>
+            </div>
+            <div class="hero-box" data-name="Lorion">
+                <img src="tainguyen/Lorion.png" onclick="zoomout(this)">
+                <span>Lorion</span>
+            </div>
+            <div class="hero-box" data-name="Taara">
+                <img src="tainguyen/Taara.png" onclick="zoomout(this)">
+                <span>Taara</span>
+            </div>
+            <div class="hero-box" data-name="Ryoma">
+                <img src="tainguyen/Ryoma.png" onclick="zoomout(this)">
+                <span>Ryoma</span>
+            </div>
+            <div class="hero-box" data-name="Sephera">
+                <img src="tainguyen/Sephera.png" onclick="zoomout(this)">
+                <span>Sephera</span>
+            </div>
+            <div class="hero-box" data-name="Bright">
+                <img src="tainguyen/Bright.png" onclick="zoomout(this)">
+                <span>Bright</span>
+            </div>
+            <div class="hero-box" data-name="Nakroth">
+                <img src="tainguyen/Nakroth.png" onclick="zoomout(this)">
+                <span>Nakroth</span>
+            </div>
+            <div class="hero-box" data-name="Astrid">
+                <img src="tainguyen/Astrid.png" onclick="zoomout(this)">
+                <span>Astrid</span>
+            </div>
+            <div class="hero-box" data-name="Florentino">
+                <img src="tainguyen/Florentino.png" onclick="zoomout(this)">
+                <span>Florentino</span>
+            </div>
+            <div class="hero-box" data-name="Grakk">
+                <img src="tainguyen/Grakk.png" onclick="zoomout(this)">
+                <span>Grakk</span>
+            </div>
+            <div class="hero-box" data-name="Tel’Annas">
+                <img src="tainguyen/Tel'Annas.png" onclick="zoomout(this)">
+                <span>Tel'Annas</span>
+            </div>
+            <div class="hero-box" data-name="Veres">
+                <img src="tainguyen/Veres.png" onclick="zoomout(this)">
+                <span>Veres</span>
+            </div>
+            <div class="hero-box" data-name="AOI">
+                <img src="tainguyen/AOI.png" onclick="zoomout(this)">
+                <span>AOI</span>
+            </div>
+            <div class="hero-box" data-name="Helen">
+                <img src="tainguyen/Helen.png" onclick="zoomout(this)">
+                <span>Helen</span>
+            </div>
+        </div>
+    </div>
+    <div id="background">
+        <!--Phần đầu-->
+        <div class="header">
+            <!--Đội xanh-->
+            <div class="name-blue">
+                <!--Logo đội xanh-->
+                <div class="name-blue__logo">
+                    <img src="tainguyen/xanh.png" alt="logo-blue" width="40px" />
+                </div>
+                <!--Tên đội xanh-->
+                <div class="name-team-blue__name">
+                    FL
+                </div>
+                <!--tỉ số đội xanh-->
+                <div class="name-team-blue__ti-so-xanh">
+                    0
+                </div>
+                <!--cấm tướng đội xanh-->
+                <div class="ban-blue">
+                    <div class="ban-hero-blue__list ban1">
+                        <!---Ban tướng xanh 1-->
+                        <img src="tainguyen/trong.png" width="200%" id="banblue1">
+                    </div>
+                    <div class="ban-hero-blue__list ban2">
+                        <!---Ban tướng xanh 2-->
+                        <img src="tainguyen/trong.png" width="200%" id="banblue2">
+                    </div>
+                    <div class="ban-hero-blue__list ban3">
+                        <!---Ban tướng xanh 3-->
+                        <img src="tainguyen/trong.png" width="200%" id="banblue3">
+                    </div>
+                    <div class="ban-hero-blue__list ban4">
+                        <!--Ban tướng xanh 4-->
+                        <img src="tainguyen/trong.png" width="200%" id="banblue4">
+                    </div>
+                </div>
+            </div>
+            <div class="countdown">
+                <span class="match">MATCH</span>
+                <span class="time">30</span>
+            </div>
+            <!--Đội đỏ-->
+            <div class="name-red">
+                <!---Cấm tướng đội đỏ-->
+                <div class="ban-red">
+                    <!--Ban-S1-->
+                    <div class="ban-hero-red__list ban1">
+                        <img src="tainguyen/trong.png" width="200%" id="banred4">
+                    </div>
+                    <!--Ban-S2-->
+                    <div class="ban-hero-red__list ban2">
+                        <img src="tainguyen/trong.png" width="200%" id="banred3">
+                    </div>
+                    <!--Ban-S3-->
+                    <div class="ban-hero-red__list ban3">
+                        <img src="tainguyen/trong.png" width="200%" id="banred2">
+                    </div>
+                    <!--Ban-S4-->
+                    <div class="ban-hero-red__list ban4">
+                        <img src="tainguyen/trong.png" width="200%" id="banred1">
+                    </div>
+                </div>
+                <!--Tỉ số đội đỏ-->
+                <div class="name-team-red__ti-so-do">
+                    2
+                </div>
+                <!--Tên đội đỏ-->
+                <div class="name-team-red__name">
+                    VGM
+                </div>
+                <!--Logo đội đỏ-->
+                <div class="name-red__logo">
+                    <img src="tainguyen/do.png" alt="logo-do" width="40px" />
+                </div>
+            </div>
+        </div>
+        <!--Tướng chọn-->
+        <div id="hero">
+            <!--tướng chọn đội xanh-->
+            <div class="hero__blue">
+                <!--Blue-top-->
+                <div class="hero__blue__list" id="top">
+                    <div class="info-blue">
+                        <div class="name-player-blue">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img id="pickblues1" src="tainguyen/top.png" height="100%">
+                    </div>
+                </div>
+                <!--Blue-jung-->
+                <div class="hero__blue__list" id="jung">
+                    <div class="info-blue">
+                        <div class="name-player-blue">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/jung.png" height="100%" id="pickblues2">
+                    </div>
+                </div>
+                <!--Blue-Mid-->
+                <div class="hero__blue__list" id="mid">
+                    <div class="info-blue">
+                        <div class="name-player-blue">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/mid.png" height="100%" id="pickblues3">
+                    </div>
+                </div>
+                <!--Blue-Ad-->
+                <div class="hero__blue__list" id="ad">
+                    <div class="info-blue">
+                        <div class="name-player-blue">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/ad.png" height="100%" id="pickblues4">
+                    </div>
+                </div>
+                <!--Blue-Sp-->
+                <div class="hero__blue__list" id="sp">
+                    <div class="info-blue">
+                        <div class="name-player-blue">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/sp.png" height="100%" id="pickblues5">
+                    </div>
+                </div>
+            </div>
+            <!--Trạng thái-->
+            <div class="moments">
+                <span class="VS">VS</span>
+                <span class="pick-ban">PICKING</span>
+            </div>
+            <!--tướng chọn đội đỏ-->
+            <div class="hero__red">
+                <!--Red Sp-->
+                <div class="hero__red__list" id="redsp">
+                    <div class="info-red">
+                        <div class="name-player-red">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/sp.png" height="100%" id="pickreds5">
+                    </div>
+                </div>
+                <!--Red-Ad-->
+                <div class="hero__red__list" id="redad">
+                    <div class="info-red">
+                        <div class="name-player-red">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/ad.png" height="100%" id="pickreds4">
+                    </div>
+                </div>
+                <!--Red-Mid-->
+                <div class="hero__red__list" id="redmid">
+                    <div class="info-red">
+                        <div class="name-player-red">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/mid.png" height="100%" id="pickreds3">
+                    </div>
+                </div>
+                <!--Red-Jung-->
+                <div class="hero__red__list" id="redjung">
+                    <div class="info-red">
+                        <div class="name-player-red">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/jung.png" height="100%" id="pickreds2">
+                    </div>
+                </div>
+                <!--Red-Top-->
+                <div class="hero__red__list" id="redtop">
+                    <div class="info-red">
+                        <div class="name-player-red">
+                            <span>FL.VINH</span>
+                        </div>
+                        <img src="tainguyen/top.png" height="100%" id="pickreds1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <div id="togglee">
+            Chuyển sang pick
+        </div>
+        <!--<div id="offblue1">
+                      Khóa tướng Blue S1
+                      </div>
+                      <div id="offblue2">
+                      Khóa tướng Blue S2
+                      </div-->
+    </div>
+    <script>
+        var background = document.getElementById("background");
+        togglee.onclick = function() {
+            background.classList.toggle('active');
+        }
+    </script>
+    <script src="js/HerooAOV.js"></script>
+</body>
+</html>
