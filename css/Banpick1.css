@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Inter:wght@200;400&family=Poppins:wght@200&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300&display=swap');
+body {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#background {
+    position: fixed;
+    bottom: 0;
+    background: #181818;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    transform: translateY(145px);
+    transition: 1s;
+}
+#background.active {
+    transform: translateY(0);
+}
+/* phần đầu */
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.countdown {
+    background: #F2C254;
+    height: 55px;
+    width: 10%;
+    font-family: 'Arimo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.countdown span.match {
+    font-size: 15px;
+}
+.countdown span.time {
+    font-size: 45px;
+}
+/*đội xanh*/
+.name-blue {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Arimo', sans-serif;
+    width: 45%;
+    height: 55px;
+    position: relative;
+}
+/*phần cấm*/
+.ban-blue {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.ban-hero-blue__list {
+    width: 18%;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.ban-hero-blue__list img {
+    margin-top: 40px;
+}
+/*phần thông tin đội xanh*/
+.name-blue__logo {
+    height: 55px;
+    width: 55px;
+    background: #FF8E34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-team-blue__name {
+    height: 55px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.name-team-blue__ti-so-xanh {
+    width: 40px;
+    height: 55px;
+    background: #4D22E1;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*thân ban pick*/
+#hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+/*phần tướng chọn đội xanh */
+.hero__blue {
+    background: #4D22E1;
+    width: 46%;
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: 'Arimo', sans-serif;
+}
+.hero__blue__list {
+    position: relative;
+    width: 50%;
+    height: 140px;
+    /*clip-path: inset(50% 50% 15% 10%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /*border-left: 1px solid white;*/
+}
+.hero__blue__list.top::before {
+    content: "";
+    background-image: conic-gradient(white 20deg,transparent 120deg);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+.hero__blue__list.top::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background: #4D22E1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__blue__list.jung::before {
+    content: "";
+    background-image: conic-gradient(white 20deg,transparent 120deg);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+    display: none;
+}
+.hero__blue__list.on.jung::before {
+    display: block;
+}
+.hero__blue__list.jung::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background: #4D22E1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__blue__list.mid::before {
+    content: "";
+    background-image: conic-gradient(white 20deg,transparent 120deg);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+.hero__blue__list.mid::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background: #4D22E1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__blue__list.ad::before {
+    content: "";
+    background-image: conic-gradient(white 20deg,transparent 120deg);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+.hero__blue__list.ad::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background: #4D22E1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__blue__list.sp::before {
+    content: "";
+    background-image: conic-gradient(white 20deg,transparent 120deg);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+.hero__blue__list.sp::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background: #4D22E1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+.info-blue {
+    width: 98%;
+    height: 138px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.name-player-blue {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 68px;
+    background-image: linear-gradient(#00000000, #4D22E1);
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+    overflow: hidden;
+}
+.name-player-blue span {
+    margin-bottom: 5px;
+}
+/*đội đỏ*/
+.name-red {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Arimo', sans-serif;
+    width: 45%;
+    height: 55px;
+    justify-content: flex-end;
+    position: relative;
+}
+/*cấm tướng đội đỏ*/
+.ban-red {
+    position: absolute;
+    width: 40%;
+    right: 50%;
+    height: 50px;
+    /*clip-path: inset(50% 50% 15% 10%);*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ban-hero-red__list {
+    width: 18%;
+    height: 50px;
+    /*clip-path: inset(50% 50% 15% 10%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: white;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.ban-hero-red__list img {
+    margin-top: 40px;
+}
+/*thông tin đội đỏ*/
+.name-red__logo {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFDA01;
+}
+.name-team-red__name {
+    height: 55px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.name-team-red__ti-so-do {
+    width: 40px;
+    height: 55px;
+    background: #63EE87;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*phần tướng chọn đội đỏ*/
+.hero__red {
+    background: #63EE87;
+    width: 46%;
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: 'Arimo', sans-serif;
+}
+.hero__red__list {
+    width: 100%;
+    height: 140px;
+    /*clip-path: inset(50% 50% 15% 10%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-left: 1px solid #2d3436;
+}
+.info-red {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-player-red {
+    position: absolute;
+    bottom: 0;
+    color: black;
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(#00000000, #63EE87);
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+.name-player-red span {
+    margin-bottom: 5px;
+}
+/*phần trạng thái*/
+.moments {
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.moments span.VS {
+    font-size: 50px;
+}
+#togglee {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background: #ff4055;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+.container {
+    position: absolute;
+    /*min-height: 100vh;
+  max-width: 1000px;*/
+    width: 20%;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    font-family: 'Arimo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+/*.container.on {
+  display: flex;
+}*/
+/*.logo {
+  width: 60%;
+  max-width: 340px;
+  height: 50px;
+  margin-bottom: 20px;
+}*/
+.baohieu{
+  position: absolute;
+  background: red;
+  width: 30%;
+  height: 60px;
+  top: 55px;
+  overflow: hidden;
+}
+.search-box {
+    position: absolute;
+    top: 10px;
+    height: 42px;
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 30px;
+    /*left: 50%;*/
+    /*top: 20px;*/
+    /*transform: translateX(-50%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 5px;
+    font-family: 'Arimo', sans-serif;
+    /*box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);*/
+    overflow: hidden;
+}
+.search-box input {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    /*left: 20px;*/
+    outline: none;
+    border: none;
+    padding-left: 45px;
+    font-family: 'Arimo', sans-serif;
+    background: transparent;
+    color: white;
+}
+.search-box .icon-search {
+    position: absolute;
+    left: 0px;
+    background-color: #0084ee;
+    width: 20%;
+    height: 200%;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box .icon-search ion-icon {
+    z-index: 2;
+}
+.container ul {
+    background: rgb(25,20,47);
+    max-width: 380px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    border-radius: 5px;
+}
+.container ul li {
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.container .hero .hero-box {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+.hero {
+    width: 80%;
+    top: 70px;
+    display: flex;
+    /*justify-content: flex-start;*/
+    flex-wrap: wrap;
+    position: relative;
+    /*left: 50%;*/
+    font-family: 'Arimo', sans-serif;
+    /*transform: translateX(-50%);*/
+}
+.hero .hero-box {
+    margin: 6px;
+    background: black;
+    /*left: 25%;*/
+    /*transform: translateX(-25%);*/
+}
+.hero .hero-box img {
+    width: 100%;
+    transition: transform 0.2s linear;
+}
+.hero-box:hover img {
+    transform: scale(1.05);
+}
+.hero .hero-box span {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 16px;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#00000000, #0083f3);
+    /*background-color: black;*/
+}
+#offblue2 {
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background: #ff4055;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+#offblue1 {
+    position: absolute;
+    top: 200px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background: #ff4055;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
